@@ -24,6 +24,37 @@ To write a Python program to calculate **Add, Sub & Division** using **Multiple 
    - Display the results of the three operations.
 
 ## 💻 Program 
-Add code here
+```
+class Parent:
+   def __init__(self,name):
+     self.name = name
+   def getName(self):
+     return self.name
+
+class Child(Parent):
+   def __init__(self,name,age):
+     Parent.__init__(self,name)
+     self.age = age
+   def getAge(self):
+     return self.age
+
+class Grandchild(Child):
+   def __init__(self,name,age,location):
+     Child.__init__(self,name,age)
+     self.location=location
+   def getLocation(self):
+     return self.location
+
+name=input()
+age=int(input())
+loc=input()
+gc = Grandchild(name,age,loc)
+print(gc.getName(), gc.getAge(), gc.getLocation())
+```
 ## Output Example
+<img width="512" height="151" alt="image" src="https://github.com/user-attachments/assets/24006bed-018c-4aa3-9917-2956c81ce5f4" />
+
+## Result
+Thus the program that uses multilevel inheritance to get and display a person’s name, age, and location executed successfully.
+
 
